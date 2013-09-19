@@ -140,7 +140,7 @@ class Ticket:
             self._category=ticket_str[5]
             self._notes=ticket_str[6]
 
-        elif (tid and creator and date and notes) != None:
+        elif (tid and creator and date and notes) != None: #these params are manditory
             self._tid=tid
             self._date=date
             self._creator=creator
@@ -156,7 +156,7 @@ class Ticket:
         return "TID:"+self._tid+", CDATE:"+self._date+", CREATOR:"+self._creator+", ASSIGNEE:"+self._assignee+", PRIORITY:"+self._priority+", CATEGORY:"+self._category+", NOTES:"+self._notes
 
 
-    def __str__(self): # each ticket split by ;, each item split by ,
+    def __str__(self): # each ticket split by \n, each item split by ,
         return self._tid+","+self._date+","+self._creator+","+self._assignee+","+self._priority+","+self._category+","+self._notes
 
 class PegError(Exception):
