@@ -1,3 +1,6 @@
+*.DS_Store 
+#fucking macs
+
 *.py[cod]
 
 # C extensions
