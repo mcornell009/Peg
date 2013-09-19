@@ -121,8 +121,11 @@ def pegInit(): #if not git repo, make it so, then make peg repo
     else:
         print "CAN'T INIT, ONE ALREADY EXISTS"
 def getLiveTickets():
-        tickets = urllib.urlopen(devcenter_url).read().split('\n')
+        tickets = urllib.urlopen(my_git_repo_url+"https://raw.github.com/"+username+reponame+"/peg_tickets").read().split('\n')
         print tickets
+
+# repo name == basename $(git remote show -n origin | grep Fetch | cut -d: -f2-)
+
 
 
 
